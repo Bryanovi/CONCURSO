@@ -28,7 +28,7 @@ export class FormComponent {
       descripcion: new FormControl(this.data?.descripcion, Validators.required),
       fechaInicio: new FormControl(this.data?.fechaInicio, Validators.required),
       fechaFin: new FormControl(this.data?.fechaFin, Validators.required),
-      responsable: new FormControl(this.data?.responsable, Validators.required),
+      estado: new FormControl(this.data?.estado, Validators.required),
 
     });
   }

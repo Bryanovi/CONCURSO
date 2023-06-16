@@ -24,13 +24,7 @@ export class MenuService {
       number: '3',
       title: 'Tareas',
       url: '/tarea',
-      icon: 'bi bi-briefcase-fill',
-    },
-    {
-      number: '4',
-      title: 'Proyectos',
-      url: '/proyecto',
-      icon: 'bi bi-briefcase-fill',
+      icon: 'fas fa-tasks',
     },
     
   ];

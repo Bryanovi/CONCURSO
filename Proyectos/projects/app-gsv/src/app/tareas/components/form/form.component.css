@@ -1,3 +1,14 @@
 .container {
   padding: 10px 0;
 }
+.estado-celeste {
+  background-color: lightblue;
+}
+
+.estado-naranja {
+  background-color: orange;
+}
+
+.estado-verde-claro {
+  background-color: lightgreen;
+}

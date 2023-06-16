@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import { MetaDataColumn } from '../../interfaces/metadatacolumn.interface';
 import { MatColumnDef, MatTable } from '@angular/material/table';
-import { FormComponent as FormComponentProducto } from '../../../productos/components/form/form.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 

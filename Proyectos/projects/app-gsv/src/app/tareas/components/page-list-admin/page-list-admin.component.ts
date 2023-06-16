@@ -21,7 +21,7 @@ export class PageListAdminComponent {
 
   metaDataColumns: MetaDataColumn[] = [
     { field: '_id', title: 'ID' },
-    { field: 'nombre', title: 'NOMBRE PROYECTO' },
+    { field: 'nombre', title: 'NOMBRE TAREA' },
     { field: 'descripcion', title: 'DESCRIPCION' },
     { field: 'fechaInicio', title: 'FECHA INICIO' },
     { field: 'fechaFin', title: 'FECHA FIN' },
@@ -140,4 +140,24 @@ export class PageListAdminComponent {
       showConfirmButton: false,
     });
   }
+  setEstadoColor(estado: string) {
+    const estadoElement = document.getElementById('estado');
+    if (estadoElement) {
+      switch (estado) {
+        case 'pendiente':
+          estadoElement.style.backgroundColor = 'lightblue';
+          break;
+        case 'progreso':
+          estadoElement.style.backgroundColor = 'orange';
+          break;
+        case 'completado':
+          estadoElement.style.backgroundColor = 'lightgreen';
+          break;
+        default:
+          estadoElement.style.backgroundColor = '';
+          break;
+      }
+    }
+  }
+
 }

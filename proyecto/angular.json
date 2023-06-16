@@ -25,6 +25,7 @@
               "projects/app-gsi/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/app-gsi/src/styles.css"
             ],
             "scripts": []
@@ -87,6 +88,7 @@
               "projects/app-gsi/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/app-gsi/src/styles.css"
             ],
             "scripts": []

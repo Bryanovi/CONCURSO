@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProyectoTableComponent } from './proyecto-table.component';
+import { TareaTableComponent } from './tarea-table.component';
 
-describe('ProyectoTableComponent', () => {
-  let component: ProyectoTableComponent;
-  let fixture: ComponentFixture<ProyectoTableComponent>;
+describe('TareaTableComponent', () => {
+  let component: TareaTableComponent;
+  let fixture: ComponentFixture<TareaTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProyectoTableComponent ]
+      declarations: [ TareaTableComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProyectoTableComponent);
+    fixture = TestBed.createComponent(TareaTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

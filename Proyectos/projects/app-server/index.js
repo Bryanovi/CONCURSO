@@ -15,6 +15,7 @@ app.use(cors());
 // api clientes
 //api productos
 app.use("/api/proyectos", require("./rutas/ProyectoRuta"));
+app.use("/api/tareas", require("./rutas/TareaRuta"));
 //api vendedores
 //app.use("/api/vendedores", require("./rutas/VendedorRuta"));
 //api cajas

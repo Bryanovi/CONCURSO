@@ -3,7 +3,7 @@ import { environment } from '../../../environments/environment';
 import { MetaDataColumn } from '../../../shared/interfaces/metadatacolumn.interface';
 import { KeypadButton } from '../../../shared/interfaces/keypadButton.interface';
 import Swal from 'sweetalert2';
-import { ProyectosService } from '../../services/proyecto.service';
+import { TareasService } from '../../services/tarea.service';
 import { AuthService } from '../../../core/components/login/services/auth.service';
 @Component({
   selector: 'gsv-page-list',

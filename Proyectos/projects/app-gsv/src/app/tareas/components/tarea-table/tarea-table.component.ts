@@ -12,11 +12,11 @@ import { MatColumnDef, MatTable } from '@angular/material/table';
 import { MetaDataColumn } from '../../../shared/interfaces/metadatacolumn.interface';
 
 @Component({
-  selector: 'gsv-proyecto-table',
-  templateUrl: './proyecto-table.component.html',
-  styleUrls: ['./proyecto-table.component.css'],
+  selector: 'gsv-tarea-table',
+  templateUrl: './tarea-table.component.html',
+  styleUrls: ['./tarea-table.component.css'],
 })
-export class ProyectoTableComponent {
+export class TareaTableComponent {
   @Input() data: any;
   @Input() metaDataColumns!: MetaDataColumn[];
   @Input() title: any;

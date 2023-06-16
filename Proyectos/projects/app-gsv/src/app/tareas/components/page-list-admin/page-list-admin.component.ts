@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { environment } from '../../../environments/environment';
 import { KeypadButton } from '../../../shared/interfaces/keypadButton.interface';
 import { MetaDataColumn } from '../../../shared/interfaces/metadatacolumn.interface';
-import { ProyectosService } from '../../services/proyecto.service';
+import { TareasService } from '../../services/tarea.service';
 
 @Component({
   selector: 'gsv-page-list-admin',
@@ -25,7 +25,7 @@ export class PageListAdminComponent {
     { field: 'descripcion', title: 'DESCRIPCION' },
     { field: 'fechaInicio', title: 'FECHA INICIO' },
     { field: 'fechaFin', title: 'FECHA FIN' },
-    { field: 'responsable', title: 'RESPONSABLE' },
+    { field: 'estado', title: 'ESTADO' },
   ];
 
   keypadButtons: KeypadButton[] = [
@@ -35,7 +35,7 @@ export class PageListAdminComponent {
   data: any[] = [];
   totalRegistros = this.data.length;
 
-  constructor(private productoService: ProyectosService) {
+  constructor(private productoService: TareasService) {
     this.cargarDocumento('');
   }
 
@@ -44,7 +44,7 @@ export class PageListAdminComponent {
     this.totalRegistros = this.data.length;
     this.changePage(0);*/
 
-    this.productoService.cargarProyectos().subscribe((dataWeb) => {
+    this.productoService.cargarTareas().subscribe((dataWeb) => {
       this.registros = dataWeb;
       if (buscar) {
         console.log(buscar);
@@ -82,7 +82,7 @@ export class PageListAdminComponent {
 
   accionEliminar(id: any) {
     console.log('Entro a pagelis');
-    this.productoService.eliminarProyecto(id).subscribe(() => {
+    this.productoService.eliminarTarea(id).subscribe(() => {
       this.cargarDocumento('');
     });
   }
@@ -97,7 +97,7 @@ export class PageListAdminComponent {
       console.log('Entro al ID');
       console.log(proyecto);
       this.productoService
-        .actualizarProyecto(formData.id, proyecto)
+        .actualizarTarea(formData.id, proyecto)
         .subscribe(() => {
           this.cargarDocumento('');
           this.formulario = false;
@@ -105,7 +105,7 @@ export class PageListAdminComponent {
         });
     } else {
       const proyecto = { ...formData };
-      this.productoService.registrarProyecto(proyecto).subscribe(() => {
+      this.productoService.registrarTarea(proyecto).subscribe(() => {
         console.log('Dentro registrar');
         console.log(proyecto);
         this.cargarDocumento('');
@@ -125,7 +125,7 @@ export class PageListAdminComponent {
 
   mostrarMensajeActualizacion(): void {
     Swal.fire({
-      title: 'Proyecto actualizado',
+      title: 'Tarea actualizado',
       icon: 'info',
       timer: 3000,
       showConfirmButton: false,
@@ -134,7 +134,7 @@ export class PageListAdminComponent {
 
   mostrarMensajeAñadir(): void {
     Swal.fire({
-      title: 'Proyecto añadido',
+      title: 'Tarea añadida',
       icon: 'info',
       timer: 3000,
       showConfirmButton: false,
